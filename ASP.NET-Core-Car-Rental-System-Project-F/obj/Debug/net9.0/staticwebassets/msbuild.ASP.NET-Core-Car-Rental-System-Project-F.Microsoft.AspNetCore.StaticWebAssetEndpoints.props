@@ -1,0 +1,40 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/ASP.NET-Core-Car-Rental-System-Project-F/app.1osiihgrhc.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"1osiihgrhc"},{"Name":"integrity","Value":"sha256-X6j9E8qpNzmh\u002Buzlh7iASCW/gXIpG3bYRfKAPA7xuks="},{"Name":"label","Value":"_content/ASP.NET-Core-Car-Rental-System-Project-F/app.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"257"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022X6j9E8qpNzmh\u002Buzlh7iASCW/gXIpG3bYRfKAPA7xuks=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 10:36:27 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ASP.NET-Core-Car-Rental-System-Project-F/app.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-X6j9E8qpNzmh\u002Buzlh7iASCW/gXIpG3bYRfKAPA7xuks="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"257"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022X6j9E8qpNzmh\u002Buzlh7iASCW/gXIpG3bYRfKAPA7xuks=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 10:36:27 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ASP.NET-Core-Car-Rental-System-Project-F/index.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-0EM\u002BvX5HLikXmpJeZJEkqaHFa3I1tuCshN3W\u002ByZOsms="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"338"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00220EM\u002BvX5HLikXmpJeZJEkqaHFa3I1tuCshN3W\u002ByZOsms=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 10:21:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ASP.NET-Core-Car-Rental-System-Project-F/index.w4e94k8vqk.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"w4e94k8vqk"},{"Name":"integrity","Value":"sha256-0EM\u002BvX5HLikXmpJeZJEkqaHFa3I1tuCshN3W\u002ByZOsms="},{"Name":"label","Value":"_content/ASP.NET-Core-Car-Rental-System-Project-F/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"338"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00220EM\u002BvX5HLikXmpJeZJEkqaHFa3I1tuCshN3W\u002ByZOsms=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 10:21:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ASP.NET-Core-Car-Rental-System-Project-F/style.9in1jffnpt.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\style.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"9in1jffnpt"},{"Name":"integrity","Value":"sha256-v5OxA7lo4BOv86b4gpjIBPMjxZnFyAtwM/WAwzUWhOQ="},{"Name":"label","Value":"_content/ASP.NET-Core-Car-Rental-System-Project-F/style.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"103"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022v5OxA7lo4BOv86b4gpjIBPMjxZnFyAtwM/WAwzUWhOQ=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 10:21:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ASP.NET-Core-Car-Rental-System-Project-F/style.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\style.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-v5OxA7lo4BOv86b4gpjIBPMjxZnFyAtwM/WAwzUWhOQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"103"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022v5OxA7lo4BOv86b4gpjIBPMjxZnFyAtwM/WAwzUWhOQ=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 10:21:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

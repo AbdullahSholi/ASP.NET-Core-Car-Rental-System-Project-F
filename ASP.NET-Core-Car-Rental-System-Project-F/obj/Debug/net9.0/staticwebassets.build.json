@@ -1,0 +1,1042 @@
+{
+  "Version": 1,
+  "Hash": "szrLrO2F5ludTPb0jb3qhdR9xr/+hrPFxtCA/PSXco0=",
+  "Source": "ASP.NET-Core-Car-Rental-System-Project-F",
+  "BasePath": "_content/ASP.NET-Core-Car-Rental-System-Project-F",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot",
+      "Source": "ASP.NET-Core-Car-Rental-System-Project-F",
+      "ContentRoot": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\",
+      "BasePath": "_content/ASP.NET-Core-Car-Rental-System-Project-F",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\279u3553ud-1osiihgrhc.gz",
+      "SourceId": "ASP.NET-Core-Car-Rental-System-Project-F",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ASP.NET-Core-Car-Rental-System-Project-F",
+      "RelativePath": "app#[.{fingerprint=1osiihgrhc}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\app.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "g9s1ysbsz2",
+      "Integrity": "rLjNKLf2QtXCTZLqOVBWRsO8pTLSJZ6ABq9AROkaRZ8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\app.js"
+    },
+    {
+      "Identity": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\cxvchacv40-w4e94k8vqk.gz",
+      "SourceId": "ASP.NET-Core-Car-Rental-System-Project-F",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ASP.NET-Core-Car-Rental-System-Project-F",
+      "RelativePath": "index#[.{fingerprint=w4e94k8vqk}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\index.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "2bcmjtdwre",
+      "Integrity": "zj56nbPA44Uj0NSMp09LIZIRFCE/zYMB/4p7xp+QS4g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\pqp0s7183p-9in1jffnpt.gz",
+      "SourceId": "ASP.NET-Core-Car-Rental-System-Project-F",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ASP.NET-Core-Car-Rental-System-Project-F",
+      "RelativePath": "style#[.{fingerprint=9in1jffnpt}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\style.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "f78f7vaxwp",
+      "Integrity": "S/rYGlgs3eNczq+1bJh8z5eqlqH1LpWrVG5cod5WyhE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\app.js",
+      "SourceId": "ASP.NET-Core-Car-Rental-System-Project-F",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\",
+      "BasePath": "_content/ASP.NET-Core-Car-Rental-System-Project-F",
+      "RelativePath": "app#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1osiihgrhc",
+      "Integrity": "X6j9E8qpNzmh+uzlh7iASCW/gXIpG3bYRfKAPA7xuks=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.js"
+    },
+    {
+      "Identity": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\index.html",
+      "SourceId": "ASP.NET-Core-Car-Rental-System-Project-F",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\",
+      "BasePath": "_content/ASP.NET-Core-Car-Rental-System-Project-F",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w4e94k8vqk",
+      "Integrity": "0EM+vX5HLikXmpJeZJEkqaHFa3I1tuCshN3W+yZOsms=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\style.css",
+      "SourceId": "ASP.NET-Core-Car-Rental-System-Project-F",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\",
+      "BasePath": "_content/ASP.NET-Core-Car-Rental-System-Project-F",
+      "RelativePath": "style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9in1jffnpt",
+      "Integrity": "v5OxA7lo4BOv86b4gpjIBPMjxZnFyAtwM/WAwzUWhOQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "app.1osiihgrhc.js",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\279u3553ud-1osiihgrhc.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004784688995"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "208"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rLjNKLf2QtXCTZLqOVBWRsO8pTLSJZ6ABq9AROkaRZ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:36:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"X6j9E8qpNzmh+uzlh7iASCW/gXIpG3bYRfKAPA7xuks=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1osiihgrhc"
+        },
+        {
+          "Name": "label",
+          "Value": "app.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-X6j9E8qpNzmh+uzlh7iASCW/gXIpG3bYRfKAPA7xuks="
+        }
+      ]
+    },
+    {
+      "Route": "app.1osiihgrhc.js",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\app.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "257"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X6j9E8qpNzmh+uzlh7iASCW/gXIpG3bYRfKAPA7xuks=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:36:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1osiihgrhc"
+        },
+        {
+          "Name": "label",
+          "Value": "app.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-X6j9E8qpNzmh+uzlh7iASCW/gXIpG3bYRfKAPA7xuks="
+        }
+      ]
+    },
+    {
+      "Route": "app.1osiihgrhc.js.gz",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\279u3553ud-1osiihgrhc.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "208"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rLjNKLf2QtXCTZLqOVBWRsO8pTLSJZ6ABq9AROkaRZ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:36:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1osiihgrhc"
+        },
+        {
+          "Name": "label",
+          "Value": "app.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rLjNKLf2QtXCTZLqOVBWRsO8pTLSJZ6ABq9AROkaRZ8="
+        }
+      ]
+    },
+    {
+      "Route": "app.js",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\279u3553ud-1osiihgrhc.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004784688995"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "208"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rLjNKLf2QtXCTZLqOVBWRsO8pTLSJZ6ABq9AROkaRZ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:36:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"X6j9E8qpNzmh+uzlh7iASCW/gXIpG3bYRfKAPA7xuks=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-X6j9E8qpNzmh+uzlh7iASCW/gXIpG3bYRfKAPA7xuks="
+        }
+      ]
+    },
+    {
+      "Route": "app.js",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\app.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "257"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X6j9E8qpNzmh+uzlh7iASCW/gXIpG3bYRfKAPA7xuks=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:36:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-X6j9E8qpNzmh+uzlh7iASCW/gXIpG3bYRfKAPA7xuks="
+        }
+      ]
+    },
+    {
+      "Route": "app.js.gz",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\279u3553ud-1osiihgrhc.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "208"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rLjNKLf2QtXCTZLqOVBWRsO8pTLSJZ6ABq9AROkaRZ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:36:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rLjNKLf2QtXCTZLqOVBWRsO8pTLSJZ6ABq9AROkaRZ8="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\cxvchacv40-w4e94k8vqk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.003937007874"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "253"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zj56nbPA44Uj0NSMp09LIZIRFCE/zYMB/4p7xp+QS4g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:21:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"0EM+vX5HLikXmpJeZJEkqaHFa3I1tuCshN3W+yZOsms=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0EM+vX5HLikXmpJeZJEkqaHFa3I1tuCshN3W+yZOsms="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "338"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0EM+vX5HLikXmpJeZJEkqaHFa3I1tuCshN3W+yZOsms=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:21:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0EM+vX5HLikXmpJeZJEkqaHFa3I1tuCshN3W+yZOsms="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.gz",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\cxvchacv40-w4e94k8vqk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "253"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zj56nbPA44Uj0NSMp09LIZIRFCE/zYMB/4p7xp+QS4g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:21:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zj56nbPA44Uj0NSMp09LIZIRFCE/zYMB/4p7xp+QS4g="
+        }
+      ]
+    },
+    {
+      "Route": "index.w4e94k8vqk.html",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\cxvchacv40-w4e94k8vqk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.003937007874"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "253"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zj56nbPA44Uj0NSMp09LIZIRFCE/zYMB/4p7xp+QS4g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:21:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"0EM+vX5HLikXmpJeZJEkqaHFa3I1tuCshN3W+yZOsms=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w4e94k8vqk"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0EM+vX5HLikXmpJeZJEkqaHFa3I1tuCshN3W+yZOsms="
+        }
+      ]
+    },
+    {
+      "Route": "index.w4e94k8vqk.html",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "338"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0EM+vX5HLikXmpJeZJEkqaHFa3I1tuCshN3W+yZOsms=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:21:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w4e94k8vqk"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0EM+vX5HLikXmpJeZJEkqaHFa3I1tuCshN3W+yZOsms="
+        }
+      ]
+    },
+    {
+      "Route": "index.w4e94k8vqk.html.gz",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\cxvchacv40-w4e94k8vqk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "253"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zj56nbPA44Uj0NSMp09LIZIRFCE/zYMB/4p7xp+QS4g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:21:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w4e94k8vqk"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zj56nbPA44Uj0NSMp09LIZIRFCE/zYMB/4p7xp+QS4g="
+        }
+      ]
+    },
+    {
+      "Route": "style.9in1jffnpt.css",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\pqp0s7183p-9in1jffnpt.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.008928571429"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"S/rYGlgs3eNczq+1bJh8z5eqlqH1LpWrVG5cod5WyhE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:21:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"v5OxA7lo4BOv86b4gpjIBPMjxZnFyAtwM/WAwzUWhOQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9in1jffnpt"
+        },
+        {
+          "Name": "label",
+          "Value": "style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-v5OxA7lo4BOv86b4gpjIBPMjxZnFyAtwM/WAwzUWhOQ="
+        }
+      ]
+    },
+    {
+      "Route": "style.9in1jffnpt.css",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"v5OxA7lo4BOv86b4gpjIBPMjxZnFyAtwM/WAwzUWhOQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:21:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9in1jffnpt"
+        },
+        {
+          "Name": "label",
+          "Value": "style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-v5OxA7lo4BOv86b4gpjIBPMjxZnFyAtwM/WAwzUWhOQ="
+        }
+      ]
+    },
+    {
+      "Route": "style.9in1jffnpt.css.gz",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\pqp0s7183p-9in1jffnpt.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"S/rYGlgs3eNczq+1bJh8z5eqlqH1LpWrVG5cod5WyhE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:21:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9in1jffnpt"
+        },
+        {
+          "Name": "label",
+          "Value": "style.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-S/rYGlgs3eNczq+1bJh8z5eqlqH1LpWrVG5cod5WyhE="
+        }
+      ]
+    },
+    {
+      "Route": "style.css",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\pqp0s7183p-9in1jffnpt.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.008928571429"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"S/rYGlgs3eNczq+1bJh8z5eqlqH1LpWrVG5cod5WyhE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:21:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"v5OxA7lo4BOv86b4gpjIBPMjxZnFyAtwM/WAwzUWhOQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-v5OxA7lo4BOv86b4gpjIBPMjxZnFyAtwM/WAwzUWhOQ="
+        }
+      ]
+    },
+    {
+      "Route": "style.css",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\wwwroot\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"v5OxA7lo4BOv86b4gpjIBPMjxZnFyAtwM/WAwzUWhOQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:21:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-v5OxA7lo4BOv86b4gpjIBPMjxZnFyAtwM/WAwzUWhOQ="
+        }
+      ]
+    },
+    {
+      "Route": "style.css.gz",
+      "AssetFile": "C:\\Users\\abdul\\RiderProjects\\ASP.NET-Core-Car-Rental-System-Project-F\\ASP.NET-Core-Car-Rental-System-Project-F\\obj\\Debug\\net9.0\\compressed\\pqp0s7183p-9in1jffnpt.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"S/rYGlgs3eNczq+1bJh8z5eqlqH1LpWrVG5cod5WyhE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:21:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-S/rYGlgs3eNczq+1bJh8z5eqlqH1LpWrVG5cod5WyhE="
+        }
+      ]
+    }
+  ]
+}

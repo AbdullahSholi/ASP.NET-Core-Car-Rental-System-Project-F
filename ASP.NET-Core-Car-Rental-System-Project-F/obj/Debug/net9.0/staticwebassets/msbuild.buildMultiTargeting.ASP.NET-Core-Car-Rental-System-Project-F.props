@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ASP.NET-Core-Car-Rental-System-Project-F.props" />
+</Project>
