@@ -2,7 +2,7 @@
 
 namespace ASP.NET_Core_Car_Rental_System_Project_F.Dtos;
 
-public class RegisterDto
+public class RegisterWriteDto
 {
     [Required]
     [StringLength(50)]

@@ -1,8 +1,12 @@
 using System.Security.Claims;
 using System.Text;
 using ASP.NET_Core_Car_Rental_System_Project_F.Auth;
+using ASP.NET_Core_Car_Rental_System_Project_F.AutoMapper;
 using ASP.NET_Core_Car_Rental_System_Project_F.Data;
 using ASP.NET_Core_Car_Rental_System_Project_F.Models;
+using ASP.NET_Core_Car_Rental_System_Project_F.Repositories.AuthRepository;
+using ASP.NET_Core_Car_Rental_System_Project_F.Repository;
+using ASP.NET_Core_Car_Rental_System_Project_F.Services.AuthService;
 using ASP.NET_Core_Car_Rental_System_Project_F.Utils;
 using AspNetCoreRateLimit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -12,7 +16,12 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
 builder.Services.AddOpenApi();
+
+builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 var jwtSettingsSection = builder.Configuration.GetSection("Jwt");
 builder.Services.Configure<JwtSettings>(jwtSettingsSection);
