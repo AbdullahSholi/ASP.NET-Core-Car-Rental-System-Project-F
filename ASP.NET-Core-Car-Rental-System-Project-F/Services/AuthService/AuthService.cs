@@ -59,12 +59,11 @@ public class AuthService : IAuthService
         if (user == null) return false;
 
         var otp = OtpGenerator.GenerateOtp();
-        Console.WriteLine(otp);
         var otpRecord = new OtpRecord
         {
             Email = email,
             Code = otp,
-            Expiration = DateTime.Now.AddMinutes(5)
+            Expiration = DateTime.Now.AddMinutes(Constants.OtpExpirationMinutes)
         };
 
         await _authRepository.SaveOtpAsync(otpRecord);
@@ -101,6 +100,7 @@ public class AuthService : IAuthService
 
     private async Task SendOtpAsync(string toEmail, string otp)
     {
+        var appPassword = Environment.GetEnvironmentVariable("APP_PASSWORD") ?? throw new InvalidOperationException(CustomMessages.UnSetAppPassword);
         var email = new MimeMessage();
         email.From.Add(new MailboxAddress(_emailSettings.SenderName, _emailSettings.SenderEmail));
         email.To.Add(MailboxAddress.Parse(toEmail));
@@ -111,7 +111,7 @@ public class AuthService : IAuthService
         using var smtp = new SmtpClient();
         await smtp.ConnectAsync(_emailSettings.SmtpServer, _emailSettings.Port,
             SecureSocketOptions.StartTls);
-        await smtp.AuthenticateAsync(_emailSettings.Username, _emailSettings.Password);
+        await smtp.AuthenticateAsync(_emailSettings.Username, appPassword);
         await smtp.SendAsync(email);
         await smtp.DisconnectAsync(true);
     }

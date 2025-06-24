@@ -3,6 +3,8 @@
 public static class CustomMessages
 {
     public const string UnSetSecretKey = "SECRET_KEY environment variable is not set.";
+    public const string UnSetConnectionString = "CAR_RENTAL_CONNECTION_STRING environment variable is not set.";
+    public const string UnSetAppPassword = "APP_PASSWORD environment variable is not set.";
     public const string InvalidCredentials = "Invalid credentials.";
     public const string InvalidEmailAddress = "Invalid email address.";
     public const string EmailSentSuccessfully = "Email sent successfully.";
@@ -10,4 +12,7 @@ public static class CustomMessages
     public const string PasswordResetSuccessfully = "Password reset successfully.";
     public const string YourOtpCode = "Your OTP Code";
     public const string DuplicatedEmail = "Duplicated email";
+    public const string InvalidToken = "Invalid token";
+    public const string LoggedOutSuccessfully = "Logged out successfully";
+    public const string TokenIsBlacklisted = "Token is blacklisted.";
 }

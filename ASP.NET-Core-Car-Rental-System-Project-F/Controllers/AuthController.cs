@@ -1,8 +1,11 @@
 ﻿using ASP.NET_Core_Car_Rental_System_Project_F.Dtos.ReadDtos;
 using ASP.NET_Core_Car_Rental_System_Project_F.Dtos.WriteDtos;
 using ASP.NET_Core_Car_Rental_System_Project_F.Services.AuthService;
+using ASP.NET_Core_Car_Rental_System_Project_F.Services.TokenBlacklistService;
 using ASP.NET_Core_Car_Rental_System_Project_F.Utils;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.JsonWebTokens;
 
 
 namespace ASP.NET_Core_Car_Rental_System_Project_F.Controllers;
@@ -48,6 +51,7 @@ public class AuthController : ControllerBase
         }
     }
 
+    [Authorize(Roles = "User,Admin")]
     [HttpPost("forgot-password")]
     public async Task<IActionResult> ForgotPassword([FromBody] EmailReadDto readDto)
     {
@@ -57,11 +61,29 @@ public class AuthController : ControllerBase
         return Ok(new { Message = CustomMessages.EmailSentSuccessfully });
     }
 
+    [Authorize(Roles = "User,Admin")]
     [HttpPost("reset-password")]
     public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordReadDto readDto)
     {
         var success = await _authService.ResetPasswordAsync(readDto);
         if (!success) return BadRequest(CustomMessages.InvalidOtp);
         return Ok(new { Message = CustomMessages.PasswordResetSuccessfully });
+    }
+
+    [Authorize(Roles = "User,Admin")]
+    [HttpPost("logout")]
+    public async Task<IActionResult> Logout([FromServices] ITokenBlacklistService blacklistService)
+    {
+        var jti = User.FindFirst(JwtRegisteredClaimNames.Jti)?.Value;
+        var exp = User.FindFirst(JwtRegisteredClaimNames.Exp)?.Value;
+
+        if (jti == null || exp == null)
+            return BadRequest(new { Message = CustomMessages.InvalidToken });
+
+        var expirationTime = DateTimeOffset.FromUnixTimeSeconds(long.Parse(exp)).UtcDateTime;
+
+        await blacklistService.AddTokenToBlacklistAsync(jti, expirationTime);
+
+        return Ok(new { Message = CustomMessages.LoggedOutSuccessfully });
     }
 }
