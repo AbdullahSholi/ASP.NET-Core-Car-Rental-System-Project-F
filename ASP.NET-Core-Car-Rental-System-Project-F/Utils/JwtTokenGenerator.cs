@@ -5,7 +5,7 @@ using ASP.NET_Core_Car_Rental_System_Project_F.Models;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace ASP.NET_Core_Car_Rental_System_Project_F.Auth;
+namespace ASP.NET_Core_Car_Rental_System_Project_F.Utils;
 
 public class JwtTokenGenerator
 {

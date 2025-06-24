@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace ASP.NET_Core_Car_Rental_System_Project_F.Auth;
+﻿namespace ASP.NET_Core_Car_Rental_System_Project_F.Models;
 
 public class User
 {

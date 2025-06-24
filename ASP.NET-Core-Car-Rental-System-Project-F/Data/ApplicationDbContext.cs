@@ -1,4 +1,4 @@
-﻿using ASP.NET_Core_Car_Rental_System_Project_F.Auth;
+﻿using ASP.NET_Core_Car_Rental_System_Project_F.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ASP.NET_Core_Car_Rental_System_Project_F.Data;
@@ -11,6 +11,7 @@ public class ApplicationDbContext : DbContext
     }
 
     public DbSet<User> Users => Set<User>();
+    public DbSet<OtpRecord> OtpRecords => Set<OtpRecord>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

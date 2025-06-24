@@ -5,7 +5,7 @@ namespace ASP.NET_Core_Car_Rental_System_Project_F.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class UserController : Controller
+public class UserController : ControllerBase
 {
     [Authorize(Roles = "User,Admin")]
     [HttpGet("user-data")]

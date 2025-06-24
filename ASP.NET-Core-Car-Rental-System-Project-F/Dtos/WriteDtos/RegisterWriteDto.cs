@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ASP.NET_Core_Car_Rental_System_Project_F.Dtos;
+namespace ASP.NET_Core_Car_Rental_System_Project_F.Dtos.WriteDtos;
 
 public class RegisterWriteDto
 {
