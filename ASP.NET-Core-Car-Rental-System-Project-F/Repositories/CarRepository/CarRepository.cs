@@ -1,4 +1,5 @@
 ﻿using ASP.NET_Core_Car_Rental_System_Project_F.Data;
+using ASP.NET_Core_Car_Rental_System_Project_F.Dtos.QueryDtos;
 using ASP.NET_Core_Car_Rental_System_Project_F.Dtos.ReadDtos;
 using ASP.NET_Core_Car_Rental_System_Project_F.Dtos.WriteDtos;
 using ASP.NET_Core_Car_Rental_System_Project_F.Models;
@@ -62,5 +63,27 @@ public class CarRepository : ICarRepository
             return;
         _context.Cars.Remove(carToDelete);
         await _context.SaveChangesAsync();
+    }
+
+    public async Task<List<Car?>> SearchAvailableCarAsync(CarQueryDto dto)
+    {
+        var query = _context.Cars.AsQueryable();
+
+        if (dto.Color.HasValue)
+            query = query.Where(c => c.Color == dto.Color.Value);
+
+        if (dto.FuelType.HasValue)
+            query = query.Where(c => c.FuelType == dto.FuelType.Value);
+
+        if (dto.TransmissionType.HasValue)
+            query = query.Where(c => c.TransmissionType == dto.TransmissionType.Value);
+
+        if (dto.Year.HasValue)
+            query = query.Where(c => c.Year == dto.Year.Value);
+
+        var cars = await query.ToListAsync();
+        var availableCars = cars.Where(c => c.AvailabilityStatus).ToList();
+
+        return availableCars;
     }
 }

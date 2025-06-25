@@ -12,7 +12,7 @@ public class ReservationRepository : IReservationRepository
     {
         _context = context;
     }
-    
+
     public async Task<Reservation?> BookCarAsync(Reservation reservation)
     {
         await using var transaction = await _context.Database.BeginTransactionAsync();
@@ -59,7 +59,7 @@ public class ReservationRepository : IReservationRepository
     {
         var reservation = await _context.Reservations.FindAsync(id);
         _context.Reservations.Remove(reservation);
-        
+
         await _context.SaveChangesAsync();
     }
 }

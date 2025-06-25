@@ -1,4 +1,7 @@
-﻿using ASP.NET_Core_Car_Rental_System_Project_F.Dtos.WriteDtos;
+﻿using ASP.NET_Core_Car_Rental_System_Project_F.Dtos.QueryDtos;
+using ASP.NET_Core_Car_Rental_System_Project_F.Dtos.WriteDtos;
+using ASP.NET_Core_Car_Rental_System_Project_F.Models;
+using ASP.NET_Core_Car_Rental_System_Project_F.Models.Enums;
 using ASP.NET_Core_Car_Rental_System_Project_F.Services.CarService;
 using ASP.NET_Core_Car_Rental_System_Project_F.Services.ReservationService;
 using ASP.NET_Core_Car_Rental_System_Project_F.Utils;
@@ -15,7 +18,8 @@ public class UserController : ControllerBase
     private readonly ILogger<UserController> _logger;
     private readonly IReservationService _reservationService;
 
-    public UserController(ICarService carService, ILogger<UserController> logger, IReservationService reservationService)
+    public UserController(ICarService carService, ILogger<UserController> logger,
+        IReservationService reservationService)
     {
         _carService = carService;
         _logger = logger;
@@ -73,7 +77,7 @@ public class UserController : ControllerBase
             return StatusCode(500, new { message = CustomMessages.InternalServerError });
         }
     }
-    
+
     [Authorize(Roles = "User,Admin")]
     [HttpDelete("reservation/{id:int}")]
     public async Task<IActionResult> BookCar([FromRoute] int id)
@@ -81,12 +85,31 @@ public class UserController : ControllerBase
         try
         {
             await _reservationService.RemoveReservationAsync(id);
-            
+
             return NoContent();
         }
         catch (Exception e)
         {
             _logger.LogError(e, CustomMessages.FailedToRemoveReservation);
+            return StatusCode(500, new { message = CustomMessages.InternalServerError });
+        }
+    }
+
+    [Authorize(Roles = "User,Admin")]
+    [HttpGet("search")]
+    public async Task<IActionResult> SearchAvailableCar([FromQuery] CarQueryDto dto)
+    {
+        try
+        {
+            var cars = await _carService.SearchAvailableCarAsync(dto);
+
+            return Ok(
+                cars
+            );
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, CustomMessages.FailedToDisplayAvailableCars);
             return StatusCode(500, new { message = CustomMessages.InternalServerError });
         }
     }

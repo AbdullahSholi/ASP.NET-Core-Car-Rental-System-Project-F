@@ -1,4 +1,5 @@
-﻿using ASP.NET_Core_Car_Rental_System_Project_F.Dtos.ReadDtos;
+﻿using ASP.NET_Core_Car_Rental_System_Project_F.Dtos.QueryDtos;
+using ASP.NET_Core_Car_Rental_System_Project_F.Dtos.ReadDtos;
 using ASP.NET_Core_Car_Rental_System_Project_F.Dtos.WriteDtos;
 using ASP.NET_Core_Car_Rental_System_Project_F.Models;
 using ASP.NET_Core_Car_Rental_System_Project_F.Repositories.CarRepository;
@@ -58,5 +59,13 @@ public class CarService : ICarService
     public async Task DeleteCarAsync(int id)
     {
         await _carRepository.DeleteCarAsync(id);
+    }
+
+    public async Task<List<CarReadDto?>> SearchAvailableCarAsync(CarQueryDto dto)
+    {
+        var cars = await _carRepository.SearchAvailableCarAsync(dto);
+        var carsReadDto = cars.Select(car => _mapper.Map<CarReadDto>(car)).ToList();
+
+        return carsReadDto;
     }
 }
