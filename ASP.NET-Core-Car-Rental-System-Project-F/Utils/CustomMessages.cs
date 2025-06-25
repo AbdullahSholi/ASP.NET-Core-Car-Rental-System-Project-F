@@ -23,6 +23,6 @@ public static class CustomMessages
     public const string ListingCarsError = "Error occurred while listing cars.";
     public const string GettingCarError = "Error occurred while getting car with ID {CarId}";
     public const string CarNotFound = "Car not found.";
-    public const string BookCarError  = "Error occurred while booking car with ID {CarId}";
+    public const string BookCarError = "Error occurred while booking car with ID {CarId}";
     public const string FailedToBookCar = "Failed to book car.";
 }

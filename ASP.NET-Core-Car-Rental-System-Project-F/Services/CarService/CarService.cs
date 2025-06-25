@@ -65,7 +65,7 @@ public class CarService : ICarService
         var reservation = _mapper.Map<Reservation>(dto);
         await _carRepository.BookCarAsync(reservation);
         var reservationReadDto = _mapper.Map<ReservationReadDto>(reservation);
-        
+
         return reservationReadDto;
     }
 }

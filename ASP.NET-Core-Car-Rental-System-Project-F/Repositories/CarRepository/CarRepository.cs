@@ -66,9 +66,43 @@ public class CarRepository : ICarRepository
 
     public async Task<Reservation?> BookCarAsync(Reservation reservation)
     {
-        _context.Reservations.Add(reservation);
-        await _context.SaveChangesAsync();
+        await using var transaction = await _context.Database.BeginTransactionAsync();
 
-        return reservation;
+        try
+        {
+            var car = await _context.Cars
+                .FromSqlInterpolated($"SELECT * FROM Cars WITH (UPDLOCK) WHERE CarId = {reservation.CarId}")
+                .FirstOrDefaultAsync();
+
+            if (car == null)
+                return null;
+
+            var isOverlapping = await _context.Reservations.AnyAsync(r =>
+                r.CarId == reservation.CarId &&
+                (
+                    (reservation.StartDate >= r.StartDate && reservation.EndDate <= r.EndDate) ||
+                    (reservation.EndDate > r.StartDate && reservation.EndDate <= r.EndDate) ||
+                    (reservation.StartDate <= r.StartDate && reservation.EndDate >= r.EndDate)
+                )
+            );
+
+            if (isOverlapping)
+                return null;
+
+            var totalDays = (reservation.EndDate - reservation.StartDate).Days;
+            reservation.TotalPrice = car.DailyRentalPrice * totalDays;
+
+            _context.Reservations.Add(reservation);
+            await _context.SaveChangesAsync();
+
+            await transaction.CommitAsync();
+
+            return reservation;
+        }
+        catch (Exception e)
+        {
+            await transaction.RollbackAsync();
+            throw;
+        }
     }
 }

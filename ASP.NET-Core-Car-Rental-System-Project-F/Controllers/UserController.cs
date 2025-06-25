@@ -52,7 +52,7 @@ public class UserController : ControllerBase
             return StatusCode(500, new { message = CustomMessages.InternalServerError });
         }
     }
-    
+
     [Authorize(Roles = "User,Admin")]
     [HttpPost("reservation")]
     public async Task<IActionResult> BookCar([FromBody] ReservationWriteDto dto)
