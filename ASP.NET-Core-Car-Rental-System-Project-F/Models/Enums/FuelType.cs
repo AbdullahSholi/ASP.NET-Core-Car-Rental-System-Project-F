@@ -4,5 +4,5 @@ public enum FuelType
 {
     Petrol = 0,
     Diesel = 1,
-    Gasoline = 2,
+    Gasoline = 2
 }

@@ -4,6 +4,7 @@ using ASP.NET_Core_Car_Rental_System_Project_F.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASP.NET_Core_Car_Rental_System_Project_F.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250624205946_BuildEntitiesAndTheirRelationships")]
+    partial class BuildEntitiesAndTheirRelationships
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -63,8 +66,7 @@ namespace ASP.NET_Core_Car_Rental_System_Project_F.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("DailyRentalPrice")
-                        .HasPrecision(10, 2)
-                        .HasColumnType("decimal(10,2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -86,7 +88,7 @@ namespace ASP.NET_Core_Car_Rental_System_Project_F.Migrations
 
                     b.HasIndex("CarModelId");
 
-                    b.ToTable("Cars");
+                    b.ToTable("Car");
                 });
 
             modelBuilder.Entity("ASP.NET_Core_Car_Rental_System_Project_F.Models.CarBrand", b =>
@@ -103,7 +105,7 @@ namespace ASP.NET_Core_Car_Rental_System_Project_F.Migrations
 
                     b.HasKey("CarBrandId");
 
-                    b.ToTable("CarBrands");
+                    b.ToTable("CarBrand");
                 });
 
             modelBuilder.Entity("ASP.NET_Core_Car_Rental_System_Project_F.Models.CarModel", b =>
@@ -125,7 +127,7 @@ namespace ASP.NET_Core_Car_Rental_System_Project_F.Migrations
 
                     b.HasIndex("CarBrandId");
 
-                    b.ToTable("CarModels");
+                    b.ToTable("CarModel");
                 });
 
             modelBuilder.Entity("ASP.NET_Core_Car_Rental_System_Project_F.Models.OtpRecord", b =>
@@ -173,8 +175,7 @@ namespace ASP.NET_Core_Car_Rental_System_Project_F.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("TotalPrice")
-                        .HasPrecision(10, 2)
-                        .HasColumnType("decimal(10,2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -185,7 +186,7 @@ namespace ASP.NET_Core_Car_Rental_System_Project_F.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Reservations");
+                    b.ToTable("Reservation");
                 });
 
             modelBuilder.Entity("ASP.NET_Core_Car_Rental_System_Project_F.Models.User", b =>

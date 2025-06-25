@@ -1,4 +1,4 @@
-﻿namespace ASP.NET_Core_Car_Rental_System_Project_F.Models;
+﻿namespace ASP.NET_Core_Car_Rental_System_Project_F.Models.Enums;
 
 public enum CarColor
 {
@@ -10,5 +10,5 @@ public enum CarColor
     Magenta = 5,
     Orange = 6,
     Pink = 7,
-    Black = 8,
+    Black = 8
 }

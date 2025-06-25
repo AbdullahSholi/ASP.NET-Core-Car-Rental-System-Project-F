@@ -4,8 +4,10 @@ using ASP.NET_Core_Car_Rental_System_Project_F.AutoMapper;
 using ASP.NET_Core_Car_Rental_System_Project_F.Data;
 using ASP.NET_Core_Car_Rental_System_Project_F.Models;
 using ASP.NET_Core_Car_Rental_System_Project_F.Repositories.AuthRepository;
+using ASP.NET_Core_Car_Rental_System_Project_F.Repositories.CarRepository;
 using ASP.NET_Core_Car_Rental_System_Project_F.Repositories.TokenBlacklistedRepository;
 using ASP.NET_Core_Car_Rental_System_Project_F.Services.AuthService;
+using ASP.NET_Core_Car_Rental_System_Project_F.Services.CarService;
 using ASP.NET_Core_Car_Rental_System_Project_F.Services.TokenBlacklistService;
 using ASP.NET_Core_Car_Rental_System_Project_F.Utils;
 using AspNetCoreRateLimit;
@@ -26,6 +28,8 @@ builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITokenBlacklistedRepository, TokenBlacklistedRepository>();
 builder.Services.AddScoped<ITokenBlacklistService, TokenBlacklistService>();
+builder.Services.AddScoped<ICarRepository, CarRepository>();
+builder.Services.AddScoped<ICarService, CarService>();
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
 var jwtSettingsSection = builder.Configuration.GetSection("Jwt");
@@ -34,7 +38,8 @@ var jwtSettings = jwtSettingsSection.Get<JwtSettings>();
 
 var secretKey = Environment.GetEnvironmentVariable("SECRET_KEY") ??
                 throw new InvalidOperationException(CustomMessages.UnSetSecretKey);
-var connectionString = Environment.GetEnvironmentVariable("CAR_RENTAL_CONNECTION_STRING") ?? throw new InvalidOperationException(CustomMessages.UnSetConnectionString);
+var connectionString = Environment.GetEnvironmentVariable("CAR_RENTAL_CONNECTION_STRING") ??
+                       throw new InvalidOperationException(CustomMessages.UnSetConnectionString);
 
 builder.Services.AddSingleton<JwtTokenGenerator>(
     sp =>
@@ -92,32 +97,7 @@ builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>()
 
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    db.Database.Migrate();
-
-    if (!db.Users.Any())
-    {
-        db.Users.AddRange(
-            new User
-            {
-                FirstName = "Abdullah", LastName = "Sholi", Email = "abdullah.ghassan.sholi@gmail.com",
-                Password = PasswordHasher.HashPassword("Sholi@971"), PhoneNumber = "+970592659066",
-                DateOfBirth = new DateTime(2002, 08, 06), Address1 = "Asira", Address2 = "Asira", City = "Nablus",
-                Country = "Palestine", DriverLicense = "None", Role = "Admin"
-            },
-            new User
-            {
-                FirstName = "Ahmed", LastName = "Sholi", Email = "groupgroup060@gmail.com",
-                Password = PasswordHasher.HashPassword("Sholi@971"), PhoneNumber = "+970592659066",
-                DateOfBirth = new DateTime(2002, 08, 06), Address1 = "Asira", Address2 = "Asira", City = "Nablus",
-                Country = "Palestine", DriverLicense = "None", Role = "User"
-            }
-        );
-        db.SaveChanges();
-    }
-}
+DataSeeder.SeedDatabase(app);
 
 if (app.Environment.IsDevelopment()) app.MapOpenApi();
 

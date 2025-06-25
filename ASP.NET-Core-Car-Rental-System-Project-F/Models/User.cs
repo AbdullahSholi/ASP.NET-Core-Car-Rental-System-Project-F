@@ -1,4 +1,6 @@
-﻿namespace ASP.NET_Core_Car_Rental_System_Project_F.Models;
+﻿using System.Collections;
+
+namespace ASP.NET_Core_Car_Rental_System_Project_F.Models;
 
 public class User
 {
@@ -27,4 +29,6 @@ public class User
     public string DriverLicense { get; set; } = string.Empty;
 
     public string Role { get; set; } = "User";
+
+    public ICollection<Reservation>? Reservations { get; set; }
 }

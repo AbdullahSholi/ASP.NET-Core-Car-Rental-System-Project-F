@@ -2,5 +2,12 @@
 
 public class CarModel
 {
-    
+    public int CarModelId { get; set; }
+    public string Name { get; set; } = string.Empty;
+
+    public int CarBrandId { get; set; }
+
+    public CarBrand? CarBrand { get; set; }
+
+    public ICollection<Car>? Cars { get; set; }
 }

@@ -12,6 +12,9 @@ public class MappingProfile : Profile
     {
         CreateMap<RegisterWriteDto, User>();
         CreateMap<LoginWriteDto, User>();
+        CreateMap<CarWriteDto, Car>();
+        CreateMap<ReservationWriteDto, Reservation>();
         CreateMap<User, UserReadDto>();
+        CreateMap<Reservation, ReservationReadDto>();
     }
 }

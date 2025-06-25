@@ -100,7 +100,8 @@ public class AuthService : IAuthService
 
     private async Task SendOtpAsync(string toEmail, string otp)
     {
-        var appPassword = Environment.GetEnvironmentVariable("APP_PASSWORD") ?? throw new InvalidOperationException(CustomMessages.UnSetAppPassword);
+        var appPassword = Environment.GetEnvironmentVariable("APP_PASSWORD") ??
+                          throw new InvalidOperationException(CustomMessages.UnSetAppPassword);
         var email = new MimeMessage();
         email.From.Add(new MailboxAddress(_emailSettings.SenderName, _emailSettings.SenderEmail));
         email.To.Add(MailboxAddress.Parse(toEmail));

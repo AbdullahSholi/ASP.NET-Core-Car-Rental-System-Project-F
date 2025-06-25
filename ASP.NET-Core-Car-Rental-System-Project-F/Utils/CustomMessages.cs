@@ -15,4 +15,14 @@ public static class CustomMessages
     public const string InvalidToken = "Invalid token";
     public const string LoggedOutSuccessfully = "Logged out successfully";
     public const string TokenIsBlacklisted = "Token is blacklisted.";
+    public const string InvalidCarInformation = "Invalid car information.";
+    public const string AddingNewCarError = "Error occurred while adding new car.";
+    public const string InternalServerError = "An internal error occurred.";
+    public const string UpdatingCarError = "Error occurred while updating car with ID {CarId}";
+    public const string DeletingCarError = "Error occurred while deleting car with ID {CarId}";
+    public const string ListingCarsError = "Error occurred while listing cars.";
+    public const string GettingCarError = "Error occurred while getting car with ID {CarId}";
+    public const string CarNotFound = "Car not found.";
+    public const string BookCarError  = "Error occurred while booking car with ID {CarId}";
+    public const string FailedToBookCar = "Failed to book car.";
 }
