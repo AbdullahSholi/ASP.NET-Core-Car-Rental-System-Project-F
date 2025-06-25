@@ -11,5 +11,4 @@ public interface ICarService
     public Task<CarReadDto?> AddCarAsync(CarWriteDto dto);
     public Task<CarReadDto?> UpdateCarAsync(int id, CarWriteDto dto);
     public Task DeleteCarAsync(int id);
-    public Task<ReservationReadDto?> BookCarAsync(ReservationWriteDto dto);
 }

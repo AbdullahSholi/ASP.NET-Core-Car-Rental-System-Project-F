@@ -1,5 +1,6 @@
 ﻿using ASP.NET_Core_Car_Rental_System_Project_F.Dtos.WriteDtos;
 using ASP.NET_Core_Car_Rental_System_Project_F.Services.CarService;
+using ASP.NET_Core_Car_Rental_System_Project_F.Services.ReservationService;
 using ASP.NET_Core_Car_Rental_System_Project_F.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -12,11 +13,13 @@ public class UserController : ControllerBase
 {
     private readonly ICarService _carService;
     private readonly ILogger<UserController> _logger;
+    private readonly IReservationService _reservationService;
 
-    public UserController(ICarService carService, ILogger<UserController> logger)
+    public UserController(ICarService carService, ILogger<UserController> logger, IReservationService reservationService)
     {
         _carService = carService;
         _logger = logger;
+        _reservationService = reservationService;
     }
 
     [Authorize(Roles = "User,Admin")]
@@ -59,7 +62,7 @@ public class UserController : ControllerBase
     {
         try
         {
-            var reservation = await _carService.BookCarAsync(dto);
+            var reservation = await _reservationService.BookCarAsync(dto);
             if (reservation == null)
                 return BadRequest(new { message = CustomMessages.FailedToBookCar });
             return Ok(new { reservation });
@@ -67,6 +70,23 @@ public class UserController : ControllerBase
         catch (Exception e)
         {
             _logger.LogError(e, CustomMessages.BookCarError, dto.CarId);
+            return StatusCode(500, new { message = CustomMessages.InternalServerError });
+        }
+    }
+    
+    [Authorize(Roles = "User,Admin")]
+    [HttpDelete("reservation/{id:int}")]
+    public async Task<IActionResult> BookCar([FromRoute] int id)
+    {
+        try
+        {
+            await _reservationService.RemoveReservationAsync(id);
+            
+            return NoContent();
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, CustomMessages.FailedToRemoveReservation);
             return StatusCode(500, new { message = CustomMessages.InternalServerError });
         }
     }

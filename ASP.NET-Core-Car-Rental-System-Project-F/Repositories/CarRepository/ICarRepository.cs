@@ -11,5 +11,4 @@ public interface ICarRepository
     public Task<Car?> AddCarAsync(Car car);
     public Task<Car?> UpdateCarAsync(Car car);
     public Task DeleteCarAsync(int id);
-    public Task<Reservation?> BookCarAsync(Reservation reservation);
 }

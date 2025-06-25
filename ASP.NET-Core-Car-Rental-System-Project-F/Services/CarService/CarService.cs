@@ -59,13 +59,4 @@ public class CarService : ICarService
     {
         await _carRepository.DeleteCarAsync(id);
     }
-
-    public async Task<ReservationReadDto?> BookCarAsync(ReservationWriteDto dto)
-    {
-        var reservation = _mapper.Map<Reservation>(dto);
-        await _carRepository.BookCarAsync(reservation);
-        var reservationReadDto = _mapper.Map<ReservationReadDto>(reservation);
-
-        return reservationReadDto;
-    }
 }

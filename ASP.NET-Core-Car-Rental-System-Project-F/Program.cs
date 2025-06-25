@@ -5,9 +5,11 @@ using ASP.NET_Core_Car_Rental_System_Project_F.Data;
 using ASP.NET_Core_Car_Rental_System_Project_F.Models;
 using ASP.NET_Core_Car_Rental_System_Project_F.Repositories.AuthRepository;
 using ASP.NET_Core_Car_Rental_System_Project_F.Repositories.CarRepository;
+using ASP.NET_Core_Car_Rental_System_Project_F.Repositories.ReservationRepository;
 using ASP.NET_Core_Car_Rental_System_Project_F.Repositories.TokenBlacklistedRepository;
 using ASP.NET_Core_Car_Rental_System_Project_F.Services.AuthService;
 using ASP.NET_Core_Car_Rental_System_Project_F.Services.CarService;
+using ASP.NET_Core_Car_Rental_System_Project_F.Services.ReservationService;
 using ASP.NET_Core_Car_Rental_System_Project_F.Services.TokenBlacklistService;
 using ASP.NET_Core_Car_Rental_System_Project_F.Utils;
 using AspNetCoreRateLimit;
@@ -30,6 +32,8 @@ builder.Services.AddScoped<ITokenBlacklistedRepository, TokenBlacklistedReposito
 builder.Services.AddScoped<ITokenBlacklistService, TokenBlacklistService>();
 builder.Services.AddScoped<ICarRepository, CarRepository>();
 builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
+builder.Services.AddScoped<IReservationService, ReservationService>();
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
 var jwtSettingsSection = builder.Configuration.GetSection("Jwt");

@@ -25,4 +25,5 @@ public static class CustomMessages
     public const string CarNotFound = "Car not found.";
     public const string BookCarError = "Error occurred while booking car with ID {CarId}";
     public const string FailedToBookCar = "Failed to book car.";
+    public const string FailedToRemoveReservation = "Failed to remove reservation.";
 }
