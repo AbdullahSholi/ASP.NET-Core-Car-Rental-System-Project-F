@@ -28,4 +28,17 @@
         <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.12.1"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\js\admin.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\api.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\auth.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\cars.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\style.css" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\" />
+    </ItemGroup>
+
 </Project>

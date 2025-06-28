@@ -1,9 +1,13 @@
-﻿using ASP.NET_Core_Car_Rental_System_Project_F.Models.Enums;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using ASP.NET_Core_Car_Rental_System_Project_F.Models.Enums;
 
 namespace ASP.NET_Core_Car_Rental_System_Project_F.Models;
 
 public class Reservation
 {
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int ReservationId { get; set; }
 
     public int UserId { get; set; }

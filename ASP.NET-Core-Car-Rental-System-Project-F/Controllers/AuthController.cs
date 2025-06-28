@@ -24,11 +24,11 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginWriteDto dto)
     {
-        var token = await _authService.LoginAsync(dto.Email, dto.Password);
-        if (token == null)
+        var result = await _authService.LoginAsync(dto.Email, dto.Password);
+        if (result == null)
             return Unauthorized(new { Message = CustomMessages.InvalidCredentials });
 
-        return Ok(new { token });
+        return Ok(new { result });
     }
 
     [HttpPost("register")]

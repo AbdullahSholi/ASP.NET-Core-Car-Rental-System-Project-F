@@ -23,6 +23,8 @@ public class ReservationService : IReservationService
         var reservation = _mapper.Map<Reservation>(dto);
         await _reservationRepository.BookCarAsync(reservation);
         var reservationReadDto = _mapper.Map<ReservationReadDto>(reservation);
+        reservationReadDto.TotalPrice = reservation.TotalPrice;
+        reservationReadDto.ReservationId = reservation.ReservationId;
 
         return reservationReadDto;
     }
@@ -30,5 +32,13 @@ public class ReservationService : IReservationService
     public async Task RemoveReservationAsync(int id)
     {
         await _reservationRepository.RemoveReservationAsync(id);
+    }
+
+    public async Task<List<ReservationReadDto?>> GetReservationsAsync(int id)
+    {
+        var reservations = await _reservationRepository.GetReservationsAsync(id);
+        var reservationsReadDto = _mapper.Map<List<ReservationReadDto>>(reservations);
+        
+        return reservationsReadDto;
     }
 }

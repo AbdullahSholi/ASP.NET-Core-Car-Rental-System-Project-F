@@ -27,7 +27,7 @@ public class AuthService : IAuthService
         _emailSettings = emailSettings.Value;
     }
 
-    public async Task<string?> LoginAsync(string email, string password)
+    public async Task<LoginReadDto?> LoginAsync(string email, string password)
     {
         var user = await _authRepository.GetUserByEmailAsync(email);
 
@@ -36,7 +36,9 @@ public class AuthService : IAuthService
 
         var token = _jwtTokenGenerator.GenerateToken(user.Email, user.Role);
 
-        return token;
+        var loginReadDto = new LoginReadDto { Token = token, userId = user.UserId };
+
+        return loginReadDto;
     }
 
     public async Task<UserReadDto?> RegisterAsync(RegisterWriteDto registerDto)

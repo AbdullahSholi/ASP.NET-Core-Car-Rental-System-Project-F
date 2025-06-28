@@ -62,4 +62,11 @@ public class ReservationRepository : IReservationRepository
 
         await _context.SaveChangesAsync();
     }
+
+    public async Task<List<Reservation?>> GetReservationsAsync(int id)
+    {
+        var reservations = await _context.Reservations.Where(r => r.UserId == id).ToListAsync();
+        
+        return reservations;
+    }
 }

@@ -27,4 +27,5 @@ public static class CustomMessages
     public const string FailedToBookCar = "Failed to book car.";
     public const string FailedToRemoveReservation = "Failed to remove reservation.";
     public const string FailedToDisplayAvailableCars = "Failed to display available cars.";
+    public const string ListingReservationsError = "Error occurred while listing reservations.";
 }

@@ -26,7 +26,6 @@ public class UserController : ControllerBase
         _reservationService = reservationService;
     }
 
-    [Authorize(Roles = "User,Admin")]
     [HttpGet("cars")]
     public async Task<IActionResult> GetCars()
     {
@@ -110,6 +109,21 @@ public class UserController : ControllerBase
         catch (Exception e)
         {
             _logger.LogError(e, CustomMessages.FailedToDisplayAvailableCars);
+            return StatusCode(500, new { message = CustomMessages.InternalServerError });
+        }
+    }
+    
+    [HttpGet("reservations/{id:int}")]
+    public async Task<IActionResult> GetUserReservations([FromRoute] int id)
+    {
+        try
+        {
+            var reservations = await _reservationService.GetReservationsAsync(id);
+            return Ok(reservations);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, CustomMessages.ListingReservationsError);
             return StatusCode(500, new { message = CustomMessages.InternalServerError });
         }
     }

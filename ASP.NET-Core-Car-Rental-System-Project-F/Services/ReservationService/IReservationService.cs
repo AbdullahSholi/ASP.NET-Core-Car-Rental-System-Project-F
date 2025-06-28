@@ -8,4 +8,5 @@ public interface IReservationService
 {
     public Task<ReservationReadDto?> BookCarAsync(ReservationWriteDto dto);
     public Task RemoveReservationAsync(int id);
+    public Task<List<ReservationReadDto?>> GetReservationsAsync(int id);
 }

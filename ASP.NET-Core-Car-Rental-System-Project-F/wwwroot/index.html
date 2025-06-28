@@ -1,15 +1,428 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Frontend with API</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<h1>Hello from frontend!</h1>
-<button onclick="fetchData()">Fetch API Data</button>
-<div id="result"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Car Rental System</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="brand">Car Rental</div>
+        <div class="nav-links">
+          <a href="#login" class="auth-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+          <a href="#register" class="auth-link"><i class="fas fa-user-plus"></i> Register</a>
+          <a href="#cars" class="protected-link"><i class="fas fa-car"></i> Cars</a>
+          <a href="#reservations" class="protected-link"><i class="fas fa-calendar-check"></i> Reservations</a>
+          <a href="#admin" class="admin-link"><i class="fas fa-tools"></i> Admin</a>
+          <a href="#logout" class="protected-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+      </nav>
+    </header>
 
-<script src="app.js"></script>
-</body>
+    <main>
+      <!-- Auth Section -->
+      <section id="auth-section" class="content-section">
+        <div id="login-form" class="auth-form">
+          <h2>Login</h2>
+          <form onsubmit="return Auth.handleLogin(event)">
+            <input type="email" id="login-email" placeholder="Email" required />
+            <input
+              type="password"
+              id="login-password"
+              placeholder="Password"
+              required
+            />
+            <button type="submit">Login</button>
+          </form>
+        </div>
+
+        <div id="register-form" class="auth-form">
+          <h2>Register</h2>
+          <form onsubmit="return Auth.handleRegister(event)">
+            <input
+              type="text"
+              id="register-first-name"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              id="register-last-name"
+              placeholder="Last Name"
+              required
+            />
+            <input
+              type="email"
+              id="register-email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="text"
+              id="register-phone"
+              placeholder="Phone Number"
+              required
+            />
+            <input
+              type="date"
+              id="register-dob"
+              placeholder="Date of Birth"
+              required
+            />
+            <input
+              type="text"
+              id="register-address1"
+              placeholder="Address Line 1"
+              required
+            />
+            <input
+              type="text"
+              id="register-address2"
+              placeholder="Address Line 2"
+            />
+            <input type="text" id="register-city" placeholder="City" required />
+            <input
+              type="text"
+              id="register-country"
+              placeholder="Country"
+              required
+            />
+            <input
+              type="text"
+              id="register-license"
+              placeholder="Driver License"
+              required
+            />
+            <input
+              type="password"
+              id="register-password"
+              placeholder="Password"
+              required
+            />
+            <input
+              type="password"
+              id="register-confirm-password"
+              placeholder="Confirm Password"
+              required
+            />
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Car Listings -->
+      <section id="cars-section" class="content-section">
+        <div class="search-filters">
+          <input type="number" id="search-year" placeholder="Year" />
+          <select id="filter-brand">
+            <option value="">All Brands</option>
+          </select>
+          <select id="filter-color">
+            <option value="">All Colors</option>
+            <option value="0">Red</option>
+            <option value="1">Blue</option>
+            <option value="2">Yellow</option>
+            <option value="3">Green</option>
+            <option value="4">Cyan</option>
+            <option value="5">Magenta</option>
+            <option value="6">Orange</option>
+            <option value="7">Pink</option>
+            <option value="8">Black</option>
+          </select>
+          <select id="filter-fuel">
+            <option value="">All Fuel Types</option>
+            <option value="0">Petrol</option>
+            <option value="1">Diesel</option>
+            <option value="2">Gasoline</option>
+          </select>
+          <select id="filter-transmission">
+            <option value="">All Transmissions</option>
+            <option value="0">Automatic</option>
+            <option value="1">Manual</option>
+          </select>
+          <input type="number" id="page-number" placeholder="Page #" min="1" />
+          <input type="number" id="page-size" placeholder="Page Size" min="1" />
+          <button onclick="CarListings.searchCars()">Search</button>
+        </div>
+        <div class="cars-grid" id="cars-container"></div>
+      </section>
+
+      <!-- Reservation Management -->
+      <section id="reservations-section" class="content-section">
+        <h2>My Reservations</h2>
+        <div id="reservations-list"></div>
+      </section>
+
+      <!-- Admin Panel -->
+      <section id="admin-section" class="content-section">
+        <div class="admin-actions">
+          <h2>Car Management</h2>
+          <button class="btn-add-new-car" onclick="Admin.showAddCarForm()">Add New Car</button>
+          <div id="car-management-form" class="admin-form hidden">
+            <h3>Car Management</h3>
+            <form id="car-form" onsubmit="return Admin.handleCarSubmit(event)">
+              <input type="hidden" id="car-id">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="make">Make</label>
+                  <input type="text" id="make" required>
+                </div>
+                <div class="form-group">
+                  <label for="model">Model</label>
+                  <input type="text" id="model" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="year">Year</label>
+                  <input type="number" id="year" required>
+                </div>
+                <div class="form-group">
+                  <label for="color">Color</label>
+                  <select id="color" required>
+                    <option value="0">Red</option>
+                    <option value="1">Blue</option>
+                    <option value="2">Yellow</option>
+                    <option value="3">Green</option>
+                    <option value="4">Cyan</option>
+                    <option value="5">Magenta</option>
+                    <option value="6">Orange</option>
+                    <option value="7">Pink</option>
+                    <option value="8">Black</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="price">Daily Price</label>
+                  <input type="number" id="price" step="0.01" required>
+                </div>
+                <div class="form-group">
+                  <label for="mileage">Mileage</label>
+                  <input type="number" id="mileage" required>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button type="button" class="btn-cancel" onclick="Admin.cancelEdit()">Cancel</button>
+                <button type="submit" class="btn-book">Save Changes</button>
+              </div>
+            </form>
+          </div>
+          <div class="cars-grid-admin" id="cars-list-admin"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/car-listings.js"></script>
+    <script src="js/reservations.js"></script>
+    <script src="js/admin.js"></script>
+    
+    <!-- Edit Car Modal -->
+    <div id="edit-car-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-modal" onclick="Admin.closeEditModal()">&times;</span>
+        <h2>Edit Car Details</h2>
+        <form id="edit-car-form" onsubmit="return Admin.handleCarUpdate(event)">
+          <input type="hidden" id="edit-car-id">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="edit-year">Year</label>
+              <input type="number" id="edit-year" required>
+            </div>
+            <div class="form-group">
+              <label for="edit-color">Color</label>
+              <select id="edit-color" required>
+                <option value="0">Red</option>
+                <option value="1">Blue</option>
+                <option value="2">Yellow</option>
+                <option value="3">Green</option>
+                <option value="4">Cyan</option>
+                <option value="5">Magenta</option>
+                <option value="6">Orange</option>
+                <option value="7">Pink</option>
+                <option value="8">Black</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="edit-fuel">Fuel Type</label>
+              <select id="edit-fuel" required>
+                <option value="0">Petrol</option>
+                <option value="1">Diesel</option>
+                <option value="2">Gasoline</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="edit-transmission">Transmission</label>
+              <select id="edit-transmission" required>
+                <option value="0">Automatic</option>
+                <option value="1">Manual</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="edit-seats">Seats</label>
+              <input type="number" id="edit-seats" required>
+            </div>
+            <div class="form-group">
+              <label for="edit-price">Daily Price</label>
+              <input type="number" id="edit-price" step="0.01" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="edit-description">Description</label>
+            <textarea id="edit-description" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="edit-availability"> Available
+            </label>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-cancel" onclick="Admin.closeEditModal()">Cancel</button>
+            <button type="submit" class="btn-book">Update Car</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Book This Car</h2>
+        <form id="booking-form" onsubmit="return Reservations.submitBooking(event)">
+          <input type="hidden" id="booking-car-id">
+          <div class="form-group">
+            <label for="start-date">Start Date</label>
+            <input type="date" id="start-date" required min="${new Date().toISOString().split('T')[0]}">
+          </div>
+          <div class="form-group">
+            <label for="end-date">End Date</label>
+            <input type="date" id="end-date" required min="${new Date().toISOString().split('T')[0]}">
+          </div>
+          <button type="submit" class="btn-book">
+            <i class="fas fa-calendar-plus"></i> Confirm Booking
+          </button>
+        </form>
+      </div>
+    </div>
+    <script>
+  function getUserRole() {
+    const token = localStorage.getItem('jwt');
+    if (!token) return null;
+
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      return payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function setupRoleBasedUI() {
+    const role = getUserRole();
+    console.log("Role: ", role);
+    
+    const adminSection = document.getElementById("admin-section");
+    const carsLink = document.querySelector('a[href="#cars"]');
+    const reservationsLink = document.querySelector('a[href="#reservations"]');
+    const adminLink = document.querySelector('a[href="#admin"]');
+    const logoutLink = document.querySelector('a[href="#logout"]');
+
+    if (role === "Admin") {
+      adminSection.classList.remove("hidden");
+      adminLink.style.display = "inline";
+      carsLink.style.display = "inline";
+      reservationsLink.style.display = "none";
+      logoutLink.style.display = "inline";
+    } else if (role === "User") {
+      adminSection.classList.add("hidden");
+      adminLink.style.display = "none";
+      carsLink.style.display = "inline";
+      reservationsLink.style.display = "inline";
+      logoutLink.style.display = "inline";
+    } else {
+      // Not logged in
+      adminSection.classList.add("hidden");
+      adminLink.style.display = "none";
+      carsLink.style.display = "inline";
+      reservationsLink.style.display = "none";
+      logoutLink.style.display = "none";
+    }
+  }
+
+  // Run immediately
+  setupRoleBasedUI();
+</script>
+
+    <script>
+      function updateActiveSection() {
+        const hash = window.location.hash.substring(1) || "login";
+
+        // Hide all main sections
+        document.querySelectorAll(".content-section").forEach((section) => {
+          section.classList.remove("active");
+        });
+
+        // Special handling for login/register inside auth-section
+        if (hash === "login" || hash === "register") {
+          const authSection = document.getElementById("auth-section");
+          authSection.classList.add("active");
+
+          // Show the correct auth form
+          document.getElementById("login-form").style.display =
+            hash === "login" ? "block" : "none";
+          document.getElementById("register-form").style.display =
+            hash === "register" ? "block" : "none";
+        } else {
+          // For other pages, show corresponding section
+          const activeSection = document.getElementById(`${hash}-section`);
+          if (activeSection) activeSection.classList.add("active");
+        }
+
+        if (hash === "cars") {
+          setTimeout(() => {
+            CarListings.searchCars();
+            CarListings.loadBrandFilters?.();
+          }, 50);
+        }
+
+        if (hash === "reservations") Reservations.loadUserReservations();
+        if (hash === "admin") Admin.loadCars();
+        if (hash === "logout") Auth.logout();
+      }
+
+      // Initial setup
+      window.addEventListener("load", updateActiveSection);
+      window.addEventListener("hashchange", updateActiveSection);
+
+      // Set default view to login
+      if (!window.location.hash) window.location.hash = "#login";
+    </script>
+    <script>
+      // Debug script to check if files are loaded
+      window.addEventListener("load", function () {
+        console.log("=== File Loading Debug ===");
+        console.log("CSS loaded:", document.styleSheets.length > 0);
+        console.log("Auth class defined:", typeof Auth !== "undefined");
+        console.log(
+          "CarListings class defined:",
+          typeof CarListings !== "undefined"
+        );
+        console.log(
+          "Reservations class defined:",
+          typeof Reservations !== "undefined"
+        );
+        console.log("Admin class defined:", typeof Admin !== "undefined");
+      });
+    </script>
+  </body>
 </html>

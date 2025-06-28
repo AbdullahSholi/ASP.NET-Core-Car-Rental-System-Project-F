@@ -6,4 +6,5 @@ public interface IReservationRepository
 {
     public Task<Reservation?> BookCarAsync(Reservation reservation);
     public Task RemoveReservationAsync(int id);
+    public Task<List<Reservation?>> GetReservationsAsync(int id);
 }

@@ -32,5 +32,9 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<Reservation>()
             .Property(r => r.TotalPrice)
             .HasPrecision(10, 2);
+        modelBuilder.Entity<Reservation>()
+            .Property(r => r.ReservationId)
+            .ValueGeneratedOnAdd();
+
     }
 }
