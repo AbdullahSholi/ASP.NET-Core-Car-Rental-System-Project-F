@@ -1,0 +1,9 @@
+﻿namespace ASP.NET_Core_Car_Rental_System_Project_F.Models;
+
+public class JwtSettings
+{
+    public string Key { get; set; } = string.Empty;
+    public string Issuer { get; set; } = string.Empty;
+    public string Audience { get; set; } = string.Empty;
+    public double ExpiresInMinutes { get; set; }
+}
